@@ -1,5 +1,6 @@
-# Contributed by Robbie Smith <zoqaeski@gmail.com>
+# Adapted by Benjamin Binier <poulpatine@gmail.com>
 # Based on Thomas Bächler’s <thomas@archlinux.org> pppoe script
+# and on Robbie Smith <zoqaeski@gmail.com> contribution
 # Also see <https://wiki.archlinux.org/index.php/3G_and_GPRS_modems_with_pppd> for more information.
 
 : ${PPPD:=pppd}
