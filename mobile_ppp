@@ -35,11 +35,9 @@ TIMEOUT 6
 'OK-AT-OK' 'ATZ'
 TIMEOUT 3
 'OK' 'AT+CFUN=1'
-'OK' 'AT${Pin:++CPIN=$(quote_word "$Pin")}'
-'' 'AT'
 'OK' 'AT+CPIN?'
-'+CPIN: READY' 'AT'
-'OK' 'ATZ'
+'+CPIN: READY-AT${Pin:++CPIN=$(quote_word "$Pin")}-OK' 'AT+CPIN?'
+'+CPIN: READY' 'ATZ'
 'OK' '${Init:-ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0}'
 'OK' 'AT$(case $Mode in
   3Gonly) printf "\^SYSCFG=14,2,3fffffff,0,1";;
